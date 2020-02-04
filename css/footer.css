@@ -1,0 +1,39 @@
+ul.footer__list__ul {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px;
+    padding-top: 40px;
+}
+
+.footer__list__menu {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+li.list__elem__numbers {
+    display: flex;
+    font-weight: bold;
+}
+
+p.list__elem__phone {
+    color: #333333;
+
+
+}
+
+p.list__elem__number {
+    margin-left: 30px;
+}
+span.list__elem__number__span {
+    color: #1943EF;
+
+}
+
+li.list__elem__social {
+    width: 18%;
+}
+
+.list__social {
+    display: flex;
+    justify-content: space-around;
+}
