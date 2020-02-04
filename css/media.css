@@ -17,6 +17,7 @@
     }
     .main__service__inner {
         width: 100%;
+
     }
     .main_service__right {
         width: 84%;
@@ -85,7 +86,9 @@
     .menu {
         display: none;
     }
-
+    .high__header {
+        padding-top: 60px;
+    }
     .navbar {
         background-color: #154fb8;
         display: block !important;
@@ -135,20 +138,32 @@
         padding-top: 50px;
     }
     h4.main__about__h4 {
-        width: 80%;
+        width: 90%;
     }
     ul.main__about__ul {
         flex-direction: column;
-
+        width: 66%;
     }
 
     li.main__about__elem {
-        width: 90%;
+        width: 100%;
+        margin-bottom: 30px;
     }
-
+    ul.service__right__ul {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    li.service__right__elem {
+        width: 100%;
+        text-align: center;
+    }
     .main__reviews__wrapper {
         flex-direction: column;
         width: 70%;
+    }
+    .inner__service__left {
+        width: 86%;
     }
     .reviews__wrapper__right {
         width: 100%;
@@ -174,5 +189,18 @@
         /* Footer */
     ul.footer__list__ul {
         flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
     }
+    li.list__elem__numbers {
+        flex-direction: column;
+    }
+    p.list__elem__number {
+        margin-left: 0;
+    }
+    li.list__elem__social {
+        width: 80%;
+
+    }
+
 }
