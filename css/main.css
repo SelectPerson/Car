@@ -188,7 +188,7 @@ p.service__right__second {
     margin-top: 20px;
 }
 
-input.service__right__submit {
+button.service__right__submit {
     width: 160px;
     height: 42px;
     border: 0;
