@@ -2,6 +2,9 @@
     .menu {
         width: 70%;
     }
+    .middle__header {
+        width: 90%;
+    }
     li.main__about__elem {
         padding-bottom: 20px;
     }
@@ -48,10 +51,10 @@
     }
     .middle__left {
         width: 80%;
-        margin: 0 auto;
+        margin: 40px auto 0;
     }
     .middle__right {
-        width: 50%;
+        width: 60%;
         margin: 50px auto;
     }
     .main__service__inner {
@@ -118,14 +121,14 @@
         display: none;
     }
     input.send__inner__text {
-        width: 220px;
+        width: 320px;
     }
     button.send__inner__submit {
-        width: 100px;
-        left: 170px;
+        width: 150px;
+        left: 250px;
     }
     .middle__right {
-        width: 50%;
+        width: 60%;
     }
     ul.middle__left__ul {
         flex-direction: column;
@@ -140,18 +143,10 @@
     h4.main__about__h4 {
         width: 90%;
     }
-    ul.main__about__ul {
-        flex-direction: column;
-        width: 66%;
-    }
 
-    li.main__about__elem {
-        width: 100%;
-        margin-bottom: 30px;
-    }
     ul.service__right__ul {
         flex-direction: column;
-        width: 80%;
+        width: 54%;
         margin: 0 auto;
     }
     li.service__right__elem {
@@ -176,7 +171,7 @@
         align-items: center;
     }
     li.reviews__right__elem {
-        width: 40%;
+        width: 30%;
         box-sizing: border-box;
         margin-bottom: 30px;
     }
@@ -208,13 +203,63 @@
         width: 80%;
         margin-top: 30px;
     }
+    .main__feedback__inputs {
+        margin-left: -50px;
+    }
+    h1.main__feedback__h1 {
+        font-size: 22px;
+        padding-top: 30px;
+    }
+    .main__feedback__inputs {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    ul.main__about__ul {
+        flex-direction: column;
+        width: 66%;
+        align-items: center;
+    }
+    li.main__about__elem {
+        width: 70%;
+        margin-bottom: 30px;
+    }
 
 }
 
 @media screen and (max-width: 600px) {
     .middle__right {
-        width: 100%;
+        width: 80%;
         margin: 20px auto;
+    }
+    li.reviews__right__elem {
+        width: 40%;
+    }
+
+
+    li.main__about__elem {
+        width: 100%;
+
+    }
+    ul.service__right__ul {
+        width: 80%;
+    }
+    input.send__inner__text {
+        width: 220px;
+    }
+    button.send__inner__submit {
+        width: 100px;
+        left: 190px;
     }
 }
 
+@media screen and (max-width: 400px) {
+    ul.service__right__ul {
+        width: 100%;
+    }
+    .middle__right {
+        width: 100%;
+    }
+    input.send__inner__text {
+        width: 20px;
+    }
+}
