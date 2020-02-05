@@ -9,7 +9,24 @@
     padding-top: 100px;
     margin-top: -1px;
 }
+li.navbar__menu__elem {
+    background-color: #154fb8;
+    margin-bottom: 1px;
 
+    z-index: 200;
+}
+a.navbar__menu__elem__a {
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 14px 0 14px 20px;
+    display: block;
+}
+
+ul.navbar__menu {
+    display: none;
+    z-index: 200;
+    position: relative;
+}
 
 h1.main__about__h1 {
 
