@@ -147,3 +147,17 @@ button.popup__send__button {
 
     }
 }
+
+/* Arrow */
+
+#arrow_up {
+    position: fixed;
+    background-color: #1943EF;
+    padding: 20px 30px;
+    cursor: pointer;
+    bottom: 28px;
+    right: 28px;
+    z-index: 10;
+    border-radius: 4px;
+    display: none;
+}
