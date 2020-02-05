@@ -260,6 +260,18 @@
         width: 100%;
     }
     input.send__inner__text {
-        width: 20px;
+        width: 230px;
+    }
+    .high__header {
+        padding-top: 10px;
+    }
+    .middle__left {
+        width: 90%;
+    }
+    button.send__inner__submit {
+        left: 170px;
+    }
+    .main__service__inner {
+        padding-bottom: 20px;
     }
 }
