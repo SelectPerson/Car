@@ -91,7 +91,7 @@ button.popup__send__button {
         width: 70%;
         left: 14%;
         top: 40px;
-        height: 48vh;
+
     }
     button.popup__send__button {
         width: 60%;
@@ -117,5 +117,27 @@ button.popup__send__button {
     }
     button.popup__send__button {
         width: 80%;
+    }
+}
+
+@media (max-width: 1600px) and (max-height: 450px) {
+    .popup__send {
+        height: 60%;
+    }
+    h1.popup__send__h1 {
+        margin: 0 auto;
+    }
+    input.popup__send__input {
+        margin: 10px auto 0;
+    }
+
+}
+
+@media (max-width: 650px) and (max-height: 450px) {
+    button.popup__send__button {
+        margin: 14px auto;
+    }
+    h1.popup__send__h1 {
+        font-size: 14px;
     }
 }
