@@ -338,11 +338,13 @@ ul.main__feedback__ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 80%;
+    margin: 0 auto;
 }
 
 h1.main__feedback__h1 {
     padding-top: 60px;
+    text-align: center;
 }
 
 h5.main__feedback__h5 {

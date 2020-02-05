@@ -153,7 +153,7 @@ input.send__inner__text {
     color: #73738D;
 }
 
-input.send__inner__submit {
+button.send__inner__submit {
     border: 0;
     width: 160px;
     background-color: #1943EF;

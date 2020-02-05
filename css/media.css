@@ -120,7 +120,7 @@
     input.send__inner__text {
         width: 220px;
     }
-    input.send__inner__submit {
+    button.send__inner__submit {
         width: 100px;
         left: 170px;
     }
