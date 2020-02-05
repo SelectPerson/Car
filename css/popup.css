@@ -91,6 +91,7 @@ button.popup__send__button {
         width: 70%;
         left: 14%;
         top: 40px;
+        height: 48vh;
     }
     button.popup__send__button {
         width: 60%;
