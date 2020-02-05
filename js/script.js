@@ -60,3 +60,24 @@ $(document).ready(() => {
     },false);
 
 });
+
+let getMenu = document.querySelectorAll('li.menu__elem');
+
+getMenu.forEach((index,i) => {
+    getMenu[i].addEventListener('click',() => {
+        switch (i) {
+            case 0: scrollToBlock('.main__about');
+            case 1: scrollToBlock('.main__service');
+            case 2: scrollToBlock('.main__reviews');
+        }
+
+    });
+});
+
+function scrollToBlock(element) {
+    element = document.querySelector(element);
+    window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth',
+    });
+}
