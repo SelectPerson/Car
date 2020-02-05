@@ -5,7 +5,7 @@ $(document).ready(() => {
 
 
     });
-    $('a.navbar__menu__elem__a').on(('click'), () => popupOn());
+    $('li.navbar__menu__elem__order').on(('click'), () => popupOn());
     $('button.service__right__submit').on(('click'), () => popupOn());
     $('a.menu__elem__a__order').on(('click'), () => popupOn());
     $('img.popup__send__close').on(('click'), () => {
@@ -66,18 +66,31 @@ let getMenu = document.querySelectorAll('li.menu__elem');
 getMenu.forEach((index,i) => {
     getMenu[i].addEventListener('click',() => {
         switch (i) {
-            case 0: scrollToBlock('.main__about');
-            case 1: scrollToBlock('.main__service');
-            case 2: scrollToBlock('.main__reviews');
+            case 0: scrollToBlock('.main__about'); break;
+            case 1: scrollToBlock('.main__service'); break;
+            case 2: scrollToBlock('.main__reviews'); break;
+        }
+
+    });
+});
+
+let getMenuNavBar = document.querySelectorAll('li.navbar__menu__elem');
+
+getMenuNavBar.forEach((index,i) => {
+    getMenuNavBar[i].addEventListener('click',() => {
+        switch (i) {
+            case 0: scrollToBlock('.main__about'); break;
+            case 1: scrollToBlock('.main__service'); break;
+            case 2: scrollToBlock('.main__reviews'); break;
         }
 
     });
 });
 
 function scrollToBlock(element) {
-    element = document.querySelector(element);
+    let getElem = document.querySelector(element);
     window.scrollTo({
-        top: element.offsetTop,
+        top: getElem.offsetTop,
         behavior: 'smooth',
     });
 }
