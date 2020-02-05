@@ -90,6 +90,7 @@ button.popup__send__button {
     .popup__send {
         width: 70%;
         left: 14%;
+        top: 40px;
     }
     button.popup__send__button {
         width: 60%;
