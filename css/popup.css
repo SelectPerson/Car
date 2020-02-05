@@ -123,6 +123,7 @@ button.popup__send__button {
 @media (max-width: 1600px) and (max-height: 450px) {
     .popup__send {
         height: 60%;
+        top: 20%;
     }
     h1.popup__send__h1 {
         margin: 0 auto;
@@ -130,14 +131,19 @@ button.popup__send__button {
     input.popup__send__input {
         margin: 10px auto 0;
     }
-
+    button.popup__send__button {
+        margin-top: 20px;
+    }
 }
 
-@media (max-width: 650px) and (max-height: 450px) {
+@media (max-width: 850px) and (max-height: 450px) {
     button.popup__send__button {
         margin: 14px auto;
     }
     h1.popup__send__h1 {
         font-size: 14px;
+    }
+    button.popup__send__button {
+
     }
 }
