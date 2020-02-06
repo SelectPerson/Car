@@ -129,11 +129,10 @@ let getMenu = document.querySelectorAll('li.menu__elem');
 
 getMenu.forEach((index,i) => {
     getMenu[i].addEventListener('click',() => {
-        switch (i) {
-            case 0: scrollToBlock('.main__about'); break;
-            case 1: scrollToBlock('.main__service'); break;
-            case 2: scrollToBlock('.main__reviews'); break;
-        }
+        if(i === 0) scrollToBlock('.main__about');
+        else if(i === 1) scrollToBlock('.main__about');
+        else if(i === 2) scrollToBlock('.main__reviews');
+
 
     });
 });
@@ -142,11 +141,10 @@ let getMenuNavBar = document.querySelectorAll('li.navbar__menu__elem');
 
 getMenuNavBar.forEach((index,i) => {
     getMenuNavBar[i].addEventListener('click',() => {
-        switch (i) {
-            case 0: scrollToBlock('.main__about'); break;
-            case 1: scrollToBlock('.main__service'); break;
-            case 2: scrollToBlock('.main__reviews'); break;
-        }
+        if(i === 0) scrollToBlock('.main__about');
+        if(i === 1) scrollToBlock('.main__service');
+        if(i === 2) scrollToBlock('.main__reviews');
+
 
     });
 });
