@@ -1,7 +1,8 @@
 $(document).ready(() => {
     /* Slider */
     let getCurrentReviews = 0;
-    getElementRew();
+    // getElementRew();
+    startTimer();
     let getTitle = $('h1.reviews__right__title');
     let getPrice = $('h1.reviews__get__price');
     let getDay = $('h1.reviews__get__day');
@@ -9,9 +10,9 @@ $(document).ready(() => {
     let getFeed = $('p.reviews__wrapper__right__first');
     let getAuthor = $('p.reviews__wrapper__right__second');
     let getImg = $('img.reviews__wrapper__left__img');
-    let getTimer;
+
     function startTimer() {
-        getTimer = setInterval(() => {
+        setInterval(() => {
             console.log('test');
             getCurrentReviews++;
             if(getCurrentReviews === GetReviews.length) {
@@ -20,15 +21,14 @@ $(document).ready(() => {
             getElementRew();
         }, 4000);
     }
-    startTimer();
+
     $('.reviews__arrow__left').on('click',() => {
         getCurrentReviews--;
         if(getCurrentReviews === -1) {
             getCurrentReviews = GetReviews.length - 1;
             console.log(getCurrentReviews);
         }
-        clearTimeout(getTimer);
-        startTimer();
+
         getElementRew();
     });
 
@@ -37,8 +37,8 @@ $(document).ready(() => {
         if(getCurrentReviews === GetReviews.length) {
             getCurrentReviews = 0;
         }
-        clearTimeout(getTimer);
-        startTimer();
+
+
         getElementRew();
     });
     function getElementRew() {
