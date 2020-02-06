@@ -1,17 +1,34 @@
 $(document).ready(() => {
     /* Slider */
     let getCurrentReviews = 0;
+    getElementRew();
     let getTitle = $('h1.reviews__right__title');
     let getPrice = $('h1.reviews__get__price');
     let getDay = $('h1.reviews__get__day');
     let getRew = $('h1.reviews__get__rew');
     let getFeed = $('p.reviews__wrapper__right__first');
     let getAuthor = $('p.reviews__wrapper__right__second');
+    let getImg = $('img.reviews__wrapper__left__img');
+    let getTimer;
+    function startTimer() {
+        getTimer = setInterval(() => {
+            console.log('test');
+            getCurrentReviews++;
+            if(getCurrentReviews === GetReviews.length) {
+                getCurrentReviews = 0;
+            }
+            getElementRew();
+        }, 4000);
+    }
+    startTimer();
     $('.reviews__arrow__left').on('click',() => {
         getCurrentReviews--;
-        if(getCurrentReviews === 0) {
+        if(getCurrentReviews === -1) {
             getCurrentReviews = GetReviews.length - 1;
+            console.log(getCurrentReviews);
         }
+        clearTimeout(getTimer);
+        startTimer();
         getElementRew();
     });
 
@@ -20,6 +37,8 @@ $(document).ready(() => {
         if(getCurrentReviews === GetReviews.length) {
             getCurrentReviews = 0;
         }
+        clearTimeout(getTimer);
+        startTimer();
         getElementRew();
     });
     function getElementRew() {
@@ -30,6 +49,7 @@ $(document).ready(() => {
             getRew.html(GetReviews[getCurrentReviews].review);
             getFeed.html(GetReviews[getCurrentReviews].text);
             getAuthor.html(GetReviews[getCurrentReviews].author);
+            getImg.attr('src',GetReviews[getCurrentReviews].img);
             $('.main__reviews__wrapper').fadeTo(600,1);
         });
 
@@ -142,13 +162,13 @@ function scrollToBlock(element) {
 let GetReviews = [
     {
         id: 1,
-        title: 'Car1',
-        price: "$300",
+        title: 'Volkswagen Passat 2017',
+        price: "$290",
         day: '3 Дні',
         review: "5/5",
-        text: 'Хороший сервіс',
-        author: "Vova",
-        img: 'test'
+        text: '“Чудовий сервіс та швидко все зробили, рекомендую!”',
+        author: "Андрій Буренюк",
+        img: 'img/reviews/first.png'
     },
     {
         id: 2,
@@ -158,7 +178,7 @@ let GetReviews = [
         review: "5/5",
         text: 'Найс',
         author: "Sasha",
-        img: 'test'
+        img: 'img/car.png'
     },
     {
         id: 3,
@@ -168,7 +188,7 @@ let GetReviews = [
         review: "5/5",
         text: 'Найс сервіс',
         author: "Lenya",
-        img: 'test'
+        img: 'img/reviews/first.png'
     },
     {
         id: 4,
@@ -178,7 +198,7 @@ let GetReviews = [
         review: "5/5",
         text: 'Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. ',
         author: "Dima",
-        img: 'test'
+        img: 'img/car.png'
     }
 ];
 
