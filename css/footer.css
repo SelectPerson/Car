@@ -24,7 +24,7 @@ p.list__elem__phone {
 p.list__elem__number {
     margin-left: 30px;
 }
-span.list__elem__number__span {
+a.list__elem__number__span {
     color: #1943EF;
 
 }

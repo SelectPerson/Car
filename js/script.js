@@ -1,9 +1,53 @@
 $(document).ready(() => {
+    /* Slider */
+    let getCurrentReviews = 0;
+    let getTitle = $('h1.reviews__right__title');
+    let getPrice = $('h1.reviews__get__price');
+    let getDay = $('h1.reviews__get__day');
+    let getRew = $('h1.reviews__get__rew');
+    let getFeed = $('p.reviews__wrapper__right__first');
+    let getAuthor = $('p.reviews__wrapper__right__second');
+    $('.reviews__arrow__left').on('click',() => {
+        getCurrentReviews--;
+        if(getCurrentReviews === 0) {
+            getCurrentReviews = GetReviews.length - 1;
+        }
+        getElementRew();
+    });
+
+    $('.reviews__arrow__right').on('click',() => {
+        getCurrentReviews++;
+        if(getCurrentReviews === GetReviews.length) {
+            getCurrentReviews = 0;
+        }
+        getElementRew();
+    });
+    function getElementRew() {
+        $('.main__reviews__wrapper').fadeTo(600,0.2, () => {
+            getTitle.html(GetReviews[getCurrentReviews].title);
+            getPrice.html(GetReviews[getCurrentReviews].price);
+            getDay.html(GetReviews[getCurrentReviews].day);
+            getRew.html(GetReviews[getCurrentReviews].review);
+            getFeed.html(GetReviews[getCurrentReviews].text);
+            getAuthor.html(GetReviews[getCurrentReviews].author);
+            $('.main__reviews__wrapper').fadeTo(600,1);
+        });
+
+    }
+
+
+
+
+    console.log(GetReviews[0].title);
+
+
+    GetReviews.map((index) => {
+
+    });
+
     let getNavMenu = $('ul.navbar__menu');
     $('.navbar').on('click', () => {
         getNavMenu.slideToggle(400);
-
-
     });
     $('li.navbar__menu__elem__order').on(('click'), () => popupOn());
     $('button.service__right__submit').on(('click'), () => popupOn());
@@ -94,3 +138,48 @@ function scrollToBlock(element) {
         behavior: 'smooth',
     });
 }
+
+let GetReviews = [
+    {
+        id: 1,
+        title: 'Car1',
+        price: "$300",
+        day: '3 Дні',
+        review: "5/5",
+        text: 'Хороший сервіс',
+        author: "Vova",
+        img: 'test'
+    },
+    {
+        id: 2,
+        title: 'Car2',
+        price: "$700",
+        day: '7 Дні',
+        review: "5/5",
+        text: 'Найс',
+        author: "Sasha",
+        img: 'test'
+    },
+    {
+        id: 3,
+        title: 'Car3',
+        price: "$600",
+        day: '2 Дні',
+        review: "5/5",
+        text: 'Найс сервіс',
+        author: "Lenya",
+        img: 'test'
+    },
+    {
+        id: 4,
+        title: 'Car4',
+        price: "$400",
+        day: '1 Дні',
+        review: "5/5",
+        text: 'Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. Дофіга тексту. ',
+        author: "Dima",
+        img: 'test'
+    }
+];
+
+

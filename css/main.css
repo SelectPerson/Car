@@ -25,7 +25,10 @@ a.navbar__menu__elem__a {
 ul.navbar__menu {
     display: none;
     z-index: 200;
-    position: relative;
+
+    position: absolute;
+    width: 100%;
+    top: 61px;
 }
 
 h1.main__about__h1 {
